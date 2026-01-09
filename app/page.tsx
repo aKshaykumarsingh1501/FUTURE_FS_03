@@ -43,7 +43,7 @@ export default function Home() {
             <Link
               key={product.id}
               href={`/products/${product.id}`}
-              className="bg-white rounded-2xl shadow hover:shadow-xl transition p-6 block"
+              className="bg-white text-black rounded-2xl shadow hover:shadow-xl transition p-6 block"
             >
               <div className="aspect-[4/3] overflow-hidden rounded-xl mb-4">
                 <img
@@ -55,7 +55,10 @@ export default function Home() {
 
               <h3 className="text-xl font-semibold mb-1">{product.name}</h3>
               <p className="text-gray-600 mb-2">{product.description}</p>
-              <p className="font-bold">{product.price}</p>
+              <p className="font-bold text-black md:text-black">
+  {product.price}
+</p>
+
             </Link>
           ))}
         </div>
