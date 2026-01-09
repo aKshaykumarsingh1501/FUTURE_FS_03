@@ -52,3 +52,6 @@ html {
 .animate-fade {
   animation: fade 2s ease forwards;
 }
+html {
+  background-color: #000;
+}
