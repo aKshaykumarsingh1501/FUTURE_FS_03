@@ -40,6 +40,7 @@ export default function Home() {
 >
 
 
+
         <h2 className="text-4xl font-bold text-center mb-12">
           Featured Products
         </h2>
