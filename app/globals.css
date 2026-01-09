@@ -6,9 +6,9 @@ body {
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
+
 
 @theme inline {
   --color-background: var(--background);
