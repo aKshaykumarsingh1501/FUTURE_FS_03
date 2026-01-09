@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Velocity – AI Web Rebrand 🏃‍♂️⚡
 
-## Getting Started
+Velocity is a modern **AI-inspired sports brand rebranding website** built using **Next.js (App Router)** and **Tailwind CSS**.  
+The project demonstrates a complete **e-commerce flow** including product listing, cart management, checkout, and a demo payment success page.
 
-First, run the development server:
+---
+
+## 🚀 Live Demo
+
+👉 **Deployed on Vercel**  
+🔗 https://future-fs-03-cyan.vercel.app/
+
+---
+
+## ✨ Features
+
+- 🛍️ Product listing with modern UI
+- 📦 Dynamic product detail pages
+- 🛒 Fully functional cart system
+- ➕➖ Increase / decrease product quantity
+- 💾 Cart persistence using `localStorage`
+- 💳 Checkout flow with demo payment success
+- 🧾 Order summary invoice (demo)
+- 📱 Fully responsive design
+- ⚡ Fast performance with Next.js App Router
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS
+- **State Management:** React Context API
+- **Deployment:** Vercel
+- **Language:** TypeScript
+
+---
+
+## 📂 Project Structure
 
 ```bash
+app/
+ ├── page.tsx               # Home page
+ ├── products/[id]/page.tsx # Dynamic product pages
+ ├── cart/page.tsx          # Cart page
+ ├── checkout/page.tsx      # Checkout page
+ ├── payment-success/page.tsx
+components/
+ ├── Navbar.tsx
+ ├── Footer.tsx
+ ├── Toast.tsx
+context/
+ └── CartContext.tsx
+data/
+ └── products.ts
+🧠 How the Cart Works
+
+Cart state is managed using React Context API
+
+Cart data is stored in localStorage
+
+Quantity changes update both UI and stored data
+
+Total price is dynamically calculated
+
+⚠️ Note
+
+This project uses a demo payment flow.
+No real payments or authentication are implemented.
+
+📦 Getting Started (Local Setup)
+git clone https://github.com/aKshaykumarsingh1501/FUTURE_FS_03.git
+cd velocity
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open:
+👉 http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📈 Future Improvements
 
-## Learn More
+🔐 Authentication (Login / Signup)
 
-To learn more about Next.js, take a look at the following resources:
+💳 Real payment gateway (Stripe)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📦 Backend database integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🧾 Downloadable invoice
 
-## Deploy on Vercel
+❤️ Wishlist feature
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+👨‍💻 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Akshay Kumar Singh
+Built as part of an internship / learning project to demonstrate frontend development skills using Next.js.
+
+⭐ Acknowledgements
+
+Next.js Documentation
+
+Tailwind CSS
+
+Vercel Platform
