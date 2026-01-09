@@ -71,11 +71,26 @@ export default function CartPage() {
 
       {/* CHECKOUT BUTTON */}
       <Link
-        href="/checkout"
-        className="block w-full text-center mt-6 px-6 py-4 rounded-full font-semibold bg-black text-white hover:scale-[1.02] active:scale-95 transition"
-      >
-        Proceed to Checkout
-      </Link>
+  href={cart.length === 0 ? "#" : "/checkout"}
+  className={`block w-full mt-6`}
+>
+  <button
+    type="button"
+    disabled={cart.length === 0}
+    className={`
+      w-full py-4 rounded-full font-semibold
+      transition-all
+      ${
+        cart.length === 0
+          ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+          : "bg-white text-black hover:scale-[1.02] active:scale-95"
+      }
+    `}
+  >
+    Proceed to Checkout
+  </button>
+</Link>
+
     </main>
   );
 }
