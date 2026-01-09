@@ -1,22 +1,25 @@
 "use client";
 
+import { useCart } from "@/context/CartContext";
 import Link from "next/link";
 
 export default function Checkout() {
+  const { cart } = useCart();
+
+  const handlePay = () => {
+    localStorage.setItem("lastOrder", JSON.stringify(cart));
+  };
+
   return (
     <main className="pt-32 px-6 max-w-xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Checkout</h1>
 
-      <input className="w-full p-3 mb-4 bg-gray-800 rounded" placeholder="Name" />
-      <input className="w-full p-3 mb-4 bg-gray-800 rounded" placeholder="Address" />
-      <input className="w-full p-3 mb-6 bg-gray-800 rounded" placeholder="Card Number" />
-
-      <Link
-        href="/payment-success"
-        className="block text-center px-6 py-3 bg-white text-black rounded-full"
+      <button
+        onClick={handlePay}
+        className="w-full py-3 bg-white text-black rounded font-semibold"
       >
-        Pay Now
-      </Link>
+        <Link href="/payment-success">Pay Now</Link>
+      </button>
     </main>
   );
 }
