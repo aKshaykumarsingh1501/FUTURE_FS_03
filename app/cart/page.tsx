@@ -72,7 +72,7 @@ export default function CartPage() {
       {/* CHECKOUT BUTTON */}
       <Link
         href="/checkout"
-        className="block w-full text-center mt-6 px-6 py-4 rounded-full font-semibold bg-white text-black hover:scale-[1.02] active:scale-95 transition"
+        className="block w-full text-center mt-6 px-6 py-4 rounded-full font-semibold bg-black text-white hover:scale-[1.02] active:scale-95 transition"
       >
         Proceed to Checkout
       </Link>
