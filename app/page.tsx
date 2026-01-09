@@ -6,7 +6,12 @@ export default function Home() {
     <main>
 
       {/* HERO */}
-      <section className="min-h-[70vh] md:min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6">
+<section className="
+  min-h-[70vh] md:min-h-screen
+  flex flex-col justify-center items-center
+  text-center px-4 sm:px-6
+  bg-black text-white
+">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
           Velocity
         </h1>
