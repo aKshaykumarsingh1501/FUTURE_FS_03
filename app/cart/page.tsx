@@ -7,11 +7,15 @@ export default function CartPage() {
   const { cart, increaseQty, decreaseQty, total } = useCart();
 
   if (cart.length === 0) {
-    return <p className="pt-24 text-center">Your cart is empty</p>;
+    return (
+      <main className="pt-24 px-6 max-w-4xl mx-auto bg-black text-white min-h-screen">
+        <p className="text-center text-gray-400">Your cart is empty</p>
+      </main>
+    );
   }
 
   return (
-    <main className="pt-24 px-6 max-w-4xl mx-auto">
+    <main className="pt-24 px-6 max-w-4xl mx-auto bg-black text-white min-h-screen">
       <h1 className="text-3xl font-bold mb-10">Your Cart</h1>
 
       <div className="space-y-6">
@@ -32,23 +36,23 @@ export default function CartPage() {
                 <p className="text-gray-400">${item.price}</p>
 
                 {/* QUANTITY CONTROLS */}
-                <div className="flex items-center gap-3 mt-2">
+                <div className="flex items-center gap-3 mt-3">
                   <button
                     type="button"
                     onClick={() => decreaseQty(item.id)}
-                    className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center"
+                    className="w-8 h-8 rounded-full bg-zinc-800 text-white flex items-center justify-center active:scale-95"
                   >
                     −
                   </button>
 
-                  <span className="min-w-[20px] text-center">
+                  <span className="min-w-[24px] text-center">
                     {item.quantity}
                   </span>
 
                   <button
                     type="button"
                     onClick={() => increaseQty(item.id)}
-                    className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center"
+                    className="w-8 h-8 rounded-full bg-zinc-800 text-white flex items-center justify-center active:scale-95"
                   >
                     +
                   </button>
@@ -67,16 +71,8 @@ export default function CartPage() {
 
       {/* CHECKOUT BUTTON */}
       <Link
-        href={cart.length === 0 ? "#" : "/checkout"}
-        className={`
-          block w-full text-center mt-6 px-6 py-4 rounded-full font-semibold
-          transition
-          ${
-            cart.length === 0
-              ? "bg-gray-700 text-gray-400 cursor-not-allowed"
-              : "bg-black text-white hover:scale-[1.02] active:scale-95"
-          }
-        `}
+        href="/checkout"
+        className="block w-full text-center mt-6 px-6 py-4 rounded-full font-semibold bg-white text-black hover:scale-[1.02] active:scale-95 transition"
       >
         Proceed to Checkout
       </Link>
