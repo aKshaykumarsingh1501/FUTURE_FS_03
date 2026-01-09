@@ -36,8 +36,9 @@ export default function Home() {
       {/* PRODUCTS */}
 <section
   id="products"
-  className="py-20 bg-black text-white md:bg-white md:text-black px-4 sm:px-6"
+  className="py-20 bg-black text-white px-4 sm:px-6"
 >
+
 
         <h2 className="text-4xl font-bold text-center mb-12">
           Featured Products
